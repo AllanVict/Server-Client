@@ -37,14 +37,13 @@ type List = {
 let userList = <List[]>[];
 
 io.on("connection", (socket: Socket) => {
-  console.log("Usuario Conectado", socket.id);
   socket.on("Nome", (userName) => {
-    console.log("Funcionou>", userName);
+    console.log(`${userName} conectado`);
+    socket.on("disconnect", (reason) => {
+      console.log(`Usuário ${userName} desconectado por ${reason}.`);
+    });
   });
 
-  socket.on("disconnect", (reason) => {
-    console.log(`Usuário ${socket.data.userName} desconectado.`);
-  });
   //----------------------------------------------------//
 
   //-----------------------------------------------------//
