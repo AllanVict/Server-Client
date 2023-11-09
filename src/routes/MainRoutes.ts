@@ -3,4 +3,4 @@ import { Home } from "../Controllers/home";
 
 export const router = Router();
 
-router.get("/", Home);
+router.get("/home", Home);

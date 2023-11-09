@@ -13,7 +13,7 @@ const ioServer = http.createServer(server);
 //define origin and methods of IO
 const io = socketIO(ioServer, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://client-rust-kappa.vercel.app",
     methods: ["GET", "POST"],
   },
 });
@@ -24,7 +24,12 @@ server.use(express.static(path.join(__dirname, "../public")));
 server.use(express.urlencoded({ extended: true }));
 
 //define to origin and methods of cors
-server.use(cors({ origin: "http://localhost:5173", methods: ["GET", "POST"] }));
+server.use(
+  cors({
+    origin: "https://client-rust-kappa.vercel.app",
+    methods: ["GET", "POST"],
+  })
+);
 server.use(express.json());
 server.use(router);
 
