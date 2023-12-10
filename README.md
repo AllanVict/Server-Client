@@ -9,5 +9,4 @@
 - Socket.io:
   Implementei o Socket.io para facilitar a comunicação em tempo real entre o cliente e o servidor, proporcionando uma experiência de chat instantânea.
   
-### Repositório do Front-end : https://github.com/AllanVict/Client-Server
--  <a href="https://github.com/AllanVict/Client-Server" target="_blank">Link para o Repositório do Front-End</a>
+### <a href="https://github.com/AllanVict/Client-Server" target="_blank">Link para o Repositório do Front-End</a>
